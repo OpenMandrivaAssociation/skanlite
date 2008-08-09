@@ -6,6 +6,7 @@ Url:		http://www.kde.org/
 Group:		Graphical desktop/KDE
 Source0:	http://fr2.rpmfind.net/linux/KDE/stable/4.1.0/src/extragear/%name-%version-kde4.1.0.tar.bz2
 Patch0:		skanlite-0.1-doc-install.patch
+Patch1:		skanlite-0.2-fix-desktop-file.patch
 Summary:        An image scanning application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  kdegraphics4-devel
@@ -34,16 +35,15 @@ library to control flat scanners.
 
 %prep
 %setup -q -n %name-%version-kde4.1.0
+%patch1 -p0
 
 %build
 %cmake_kde4
 %make
 
 %install
-cd build
 rm -rf %buildroot
-%{makeinstall_std}
-cd -
+%{makeinstall_std} -C build
 %find_lang %name --with-html
 
 %clean
