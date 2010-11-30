@@ -1,10 +1,10 @@
 Name:		skanlite
-Version:	0.4
+Version:	0.6
 Release:	%mkrel 1
 License:	GPLv2+
-Url:		http://www.kde.org/
+Url:		http://opendesktop.org/content/show.php/Skanlite?content=109803
 Group:		Graphical desktop/KDE
-Source0:	http://fr2.rpmfind.net/linux/KDE/stable/4.4.0/src/extragear/%name-%version-kde4.4.0.tar.bz2
+Source0:	http://sourceforge.net/projects/sanewidget/files/Skanlite/%name-%version.tar.bz2
 Summary:        An image scanning application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  kdegraphics4-devel
@@ -32,7 +32,7 @@ library to control flat scanners.
 #------------------------------------------------
 
 %prep
-%setup -q -n %name-%version-kde4.4.0
+%setup -q -n %name-%version
 
 %build
 %cmake_kde4
