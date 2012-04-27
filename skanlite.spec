@@ -1,13 +1,15 @@
 Name:		skanlite
-Version:	0.7
-Release:	%mkrel 1
+Version:	0.8
+Release:	1
 License:	GPLv2+
 Url:		http://opendesktop.org/content/show.php/Skanlite?content=109803
 Group:		Graphical desktop/KDE
 Source0:	http://sourceforge.net/projects/sanewidget/files/Skanlite/%name-%version.tar.bz2
 Summary:        An image scanning application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:  kdegraphics4-devel
+BuildRequires:  libksane-devel
+BuildRequires:	kdelibs4-devel
+BuildRequires:	libpng-devel
 
 %description
 Skanlite is an image scanning application that does nothing more than
