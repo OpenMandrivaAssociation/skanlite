@@ -1,5 +1,5 @@
 Name:		skanlite
-Version:	0.8
+Version:	0.9
 Release:	1
 License:	GPLv2+
 Url:		http://opendesktop.org/content/show.php/Skanlite?content=109803
