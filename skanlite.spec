@@ -1,10 +1,10 @@
 Name:		skanlite
-Version:	0.8
+Version:	0.9
 Release:	1
 License:	GPLv2+
 Url:		http://opendesktop.org/content/show.php/Skanlite?content=109803
 Group:		Graphical desktop/KDE
-Source0:	http://sourceforge.net/projects/sanewidget/files/Skanlite/%name-%version.tar.bz2
+Source0:	https://sourceforge.net/projects/sanewidget/files/Skanlite/%{name}-%{version}.tar.bz2
 Summary:        An image scanning application
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  libksane-devel
@@ -82,4 +82,5 @@ rm -rf %buildroot
 * Fri Jul 18 2008 Funda Wang <fwang@mandriva.org> 0.1-1mdv2009.0
 + Revision: 238143
 - import skanlite
+
 
