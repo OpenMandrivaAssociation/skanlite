@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   skanlite-1.1.tar.xz: b24c5890793c3964bf86b43e77ecc1999415b31d
+sources:
+  skanlite-2.0.tar.xz: 9ecf9c6bfcbf75b5ae3af65ec38ac1a8210b7c55
