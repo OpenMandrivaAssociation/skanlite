@@ -9,6 +9,7 @@ Source0:	http://download.kde.org/stable/%{name}/%{version}/%{name}-%{version}.ta
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5I18n)
