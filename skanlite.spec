@@ -6,7 +6,6 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
 Source0:	http://download.kde.org/stable/%{name}/%{version}/%{name}-%{version}.tar.xz
-BuildRequires:	libksane-devel
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
