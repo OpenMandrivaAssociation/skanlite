@@ -1,7 +1,7 @@
 Summary:	An image scanning application
 Name:		skanlite
 Version:	2.0
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
@@ -33,13 +33,12 @@ library to control flat scanners.
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
-%ninja
+%ninja -C build
 
 %install
 %ninja_install -C build
 
 %find_lang %{name} --with-html
-
