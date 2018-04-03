@@ -1,11 +1,13 @@
+%define url_ver %(echo %version | cut -d. -f1,2)
+
 Summary:	An image scanning application
 Name:		skanlite
-Version:	2.0
-Release:	2
+Version:	2.1.0.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
-Source0:	http://download.kde.org/stable/%{name}/%{version}/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/stable/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
@@ -28,6 +30,7 @@ library to control flat scanners.
 %files -f %{name}.lang
 %{_kde5_bindir}/%{name}
 %{_datadir}/applications/*.desktop
+%{_datadir}/metainfo/org.kde.skanlite.appdata.xml
 
 #------------------------------------------------
 
