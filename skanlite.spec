@@ -20,7 +20,7 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5Sane)
 BuildRequires:	cmake(KF5TextWidgets)
-
+Provides:	scanner-gui
 
 %description
 Skanlite is an image scanning application that does nothing more than
