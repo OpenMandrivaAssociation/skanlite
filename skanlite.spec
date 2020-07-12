@@ -2,8 +2,8 @@
 
 Summary:	An image scanning application
 Name:		skanlite
-Version:	2.1.0.1
-Release:	3
+Version:	2.2.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
