@@ -31,6 +31,7 @@ library to control flat scanners.
 %{_kde5_bindir}/%{name}
 %{_datadir}/applications/*.desktop
 %{_datadir}/metainfo/org.kde.skanlite.appdata.xml
+%{_iconsdir}/hicolor/*x*/apps/org.kde.skanlite.svg
 
 #------------------------------------------------
 
