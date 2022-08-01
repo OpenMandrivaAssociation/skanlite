@@ -2,12 +2,12 @@
 
 Summary:	An image scanning application
 Name:		skanlite
-Version:	2.2.0
-Release:	2
+Version:	22.04.3
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
-Source0:	http://download.kde.org/stable/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	https://download.kde.org/stable/release-service/%{version}/src/skanlite-%{version}.tar.xz
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
