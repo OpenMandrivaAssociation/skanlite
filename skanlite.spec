@@ -1,13 +1,14 @@
 %define url_ver %(echo %version | cut -d. -f1,2)
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	An image scanning application
 Name:		skanlite
-Version:	22.04.3
+Version:	22.07.90
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
-Source0:	https://download.kde.org/stable/release-service/%{version}/src/skanlite-%{version}.tar.xz
+Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/skanlite-%{version}.tar.xz
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
