@@ -4,7 +4,7 @@
 Summary:	An image scanning application
 Name:		skanlite
 Version:	22.08.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
@@ -22,6 +22,8 @@ BuildRequires:	cmake(KF5DocTools)
 BuildRequires:	cmake(KF5Sane)
 BuildRequires:	cmake(KF5TextWidgets)
 Provides:	scanner-gui
+
+Requires: sane
 
 %description
 Skanlite is an image scanning application that does nothing more than
