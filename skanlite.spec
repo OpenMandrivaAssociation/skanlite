@@ -1,14 +1,21 @@
+%define git 20240222
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define url_ver %(echo %version | cut -d. -f1,2)
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	An image scanning application
 Name:		skanlite
-Version:	23.08.4
-Release:	2
+Version:	24.02.0
+Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://www.kde.org/applications/graphics/skanlite/
+%if 0%{?git:1}
+Source0:        https://invent.kde.org/graphics/skanlite/-/archive/%{gitbranch}/skanlite-%{gitbranchd}.tar.bz2#/skanlite-%{git}.tar.bz2
+%else
 Source0:	https://download.kde.org/%{stable}/release-service/%{version}/src/skanlite-%{version}.tar.xz
+%endif
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
@@ -39,8 +46,9 @@ library to control flat scanners.
 #------------------------------------------------
 
 %prep
-%setup -q
-%cmake_kde5
+%autosetup -p1 -n skanlite-%{?git:%{gitbranchd}}%{!?git:%{version}}
+%cmake_kde5 \
+	-DQT_MAJOR_VERSION=5
 
 %build
 %ninja -C build
