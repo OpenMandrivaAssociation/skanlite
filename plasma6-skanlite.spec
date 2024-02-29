@@ -1,4 +1,4 @@
-%define git 20240218
+#define git 20240218
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define url_ver %(echo %version | cut -d. -f1,2)
@@ -6,7 +6,7 @@
 
 Summary:	An image scanning application
 Name:		plasma6-skanlite
-Version:	24.01.96
+Version:	24.02.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
