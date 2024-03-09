@@ -1,4 +1,4 @@
-%define git 20240222
+#define git 20240222
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define url_ver %(echo %version | cut -d. -f1,2)
