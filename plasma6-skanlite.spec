@@ -6,7 +6,7 @@
 
 Summary:	An image scanning application
 Name:		plasma6-skanlite
-Version:	24.08.3
+Version:	24.12.0
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
