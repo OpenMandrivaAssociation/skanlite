@@ -6,7 +6,7 @@
 
 Summary:	An image scanning application
 Name:		skanlite
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -33,6 +33,11 @@ Provides:	scanner-gui
 
 Requires: sane
 
+%rename plasma6-skanlite
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Skanlite is an image scanning application that does nothing more than
 scan and save images. It is based on libksane, a KDE interface for SANE
@@ -43,20 +48,3 @@ library to control flat scanners.
 %{_datadir}/applications/*.desktop
 %{_datadir}/metainfo/org.kde.skanlite.appdata.xml
 %{_datadir}/icons/hicolor/scalable/apps/org.kde.skanlite.svg
-
-#------------------------------------------------
-
-%prep
-%autosetup -p1 -n skanlite-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DQT_MAJOR_VERSION=6 \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-
-%find_lang skanlite --with-html
