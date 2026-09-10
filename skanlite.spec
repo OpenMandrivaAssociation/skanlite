@@ -6,7 +6,7 @@
 
 Summary:	An image scanning application
 Name:		skanlite
-Version:	26.08.0
+Version:	26.08.1
 Release:	%{?git:0.%{git}.}2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
